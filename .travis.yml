@@ -1,1 +1,10 @@
 language: elixir
+
+services:
+  - docker
+
+script:
+  - docker-compose up -d
+  - mix deps.get
+  - mix test
+ 
